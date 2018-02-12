@@ -4,8 +4,7 @@
 indicatorFolder <- "../../data_raw/world development indicators/"
 filePaths <- list.files(indicatorFolder)
 
-namesPath <- "../../data_raw/index_wdi.txt"
-indicatorTypes <- readLines(namesPath)
+indicatorTypes <- sapply(filePaths,function(p){substr(p,1,nchar(p)-4)},USE.NAMES = FALSE)
 
 # install.packages("RPostgreSQL")
 library(RPostgreSQL)
@@ -17,7 +16,7 @@ con <- dbConnect(drv, user='postgres', password='admin123', dbname='postgres', h
 # indicatorsDF$Value.Footnotes = NULL
 cat("Loading indicators...")
 pb <- txtProgressBar(min=0,max=length(filePaths), initial=0,style=3)
-for( i in 2:length(filePaths)){
+for( i in 1:length(filePaths)){
   setTxtProgressBar(pb,i)
   tmpData <- read.table(paste(indicatorFolder,filePaths[i],sep = ""), header=T, quote="\"", sep=";",fill = T)[,1:3]
   tableName <- indicatorTypes[i]
