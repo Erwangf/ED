@@ -47,17 +47,17 @@ Les fichiers se trouvant dans pré-traitement peuvent être lancé directement (
 
 # To do :
 
-[ ] Rapport
-	[ ] Intro
-	[ ] 1 Description des données (>> ???)
-	[ ] 2 Objectifs d'analyse (>> ???)
-	[ ] 3 Modèle conceptuel multidimensionnel (>> Erwan)
-	[ ] 4 Implémentation du modèle (>> Erwan)
-	[ ] 5 Tâches d'ETL (>> Erwan)
-	[ ] 6 Analyses OLAP - Reporting (>> ???)
-	[ ] 7 Conclusion (>> ???)
-[ ] Réaliser les premières analyses sur Tableau Software (>> ???)
-[ ] Modèle conceptuel des données (>> Erwan)
-[ ] Chargement en BDD du dataset commodity_trades conforme au MCD (>> Erwan)
+- [ ] Rapport
+	- [ ] Intro
+	- [ ] 1 Description des données (>> ???)
+	- [ ] 2 Objectifs d'analyse (>> ???)
+	- [ ] 3 Modèle conceptuel multidimensionnel (>> Erwan)
+	- [ ] 4 Implémentation du modèle (>> Erwan)
+	- [ ] 5 Tâches d'ETL (>> Erwan)
+	- [ ] 6 Analyses OLAP - Reporting (>> ???)
+	- [ ] 7 Conclusion (>> ???)
+- [ ] Réaliser les premières analyses sur Tableau Software (>> ???)
+- [ ] Modèle conceptuel des données (>> Erwan)
+- [ ] Chargement en BDD du dataset commodity_trades conforme au MCD (>> Erwan)
 
 
