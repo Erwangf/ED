@@ -4,7 +4,7 @@
 commodityFolder <- "../../data_raw/commodity trades/"
 filePaths <- list.files(commodityFolder)
 
-namesPath <- "../../data_raw/commodities.txt"
+namesPath <- "../../data_raw/index_commodities.txt"
 commodities <- readLines(namesPath)
 
 commodityDF <- read.table(paste(commodityFolder,filePaths[1],sep = ""), header=T, quote="\"", sep=";",fill = T)
@@ -22,6 +22,7 @@ commodityDF$CommodityType <- as.factor(commodityDF$CommodityType)
 
 summary(commodityDF)
 
+# install.packages("RPostgreSQL")
 library(RPostgreSQL)
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv, user='postgres', password='admin123', dbname='postgres', host='127.0.0.1')
