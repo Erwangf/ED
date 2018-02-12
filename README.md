@@ -48,7 +48,7 @@ Les fichiers se trouvant dans pré-traitement peuvent être lancé directement (
 # To do :
 
 - [ ] Rapport
-	- [ ] Intro
+	- [ ] Intro (>> ???)
 	- [ ] 1 Description des données (>> ???)
 	- [ ] 2 Objectifs d'analyse (>> ???)
 	- [ ] 3 Modèle conceptuel multidimensionnel (>> Erwan)
