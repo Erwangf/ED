@@ -38,7 +38,7 @@ for( i in 1:length(filePaths)){
     if(nrow(df[df$area==line[,1] & df$year==line[,2],])==0){
       df[nrow(df)+1,] <- c(area=line[,1],year=line[,2], NA, NA, NA, NA, NA, NA, NA, NA, NA)
     }
-    if(is.na(line[,3])){
+    if(is.na(line[,3]) || !is.numeric(line[,3])){
       print(line)
     } else {
       df[df$area==line[,1] & df$year==line[,2],i+2] <- line[,3]
@@ -49,8 +49,14 @@ for( i in 1:length(filePaths)){
 
 }
 
+for(id in indicatorTypes){
+  df[id] = as.numeric(df[id][,1])
+}
+
+df$year <- as.numeric(df$year)
+
 # Drop table if it already exists
-if (dbExistsTable(con, "wdi")) dbRemoveTable(con, tableName)
+if (dbExistsTable(con, "wdi")) dbRemoveTable(con, "wdi")
 
 dbWriteTable(con, name = "wdi", value = df, row.names = FALSE)
 
